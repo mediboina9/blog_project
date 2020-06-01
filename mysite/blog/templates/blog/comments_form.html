@@ -1,0 +1,15 @@
+{% extends "blog/base.html" %}
+{% block body_block %}
+<h1>
+  {% if form.instance.pk %}
+  Edit the Comment:
+  {% else %}
+  New Comment:
+  {% endif %}
+</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" name="" value="submit">
+  </form>
+{% endblock %}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><a href ="{% url 'blog:list' %}"> My Tech blog </a></li>
+      <li><a href ="{% url 'blog:new' %}"> New Post </a></li>
+      <li><a href ="{% url 'admin:index' %}"> Admin </a></li>
+    </ul>
+
+
+    {% block body_block %}
+
+    {% endblock %}
+  </body>
+</html>
